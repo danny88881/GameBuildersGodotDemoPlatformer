@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Tileset/tile2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Tileset/tile3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Tileset/tile1.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="TileSet" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tile1" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile1"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile1/StaticBody2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tile2" type="Sprite" parent="."]
+position = Vector2( 17, 0 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile2"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile2/StaticBody2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tile3" type="Sprite" parent="."]
+position = Vector2( 34, 0 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile3"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile3/StaticBody2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
